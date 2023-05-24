@@ -9,6 +9,8 @@ import { AVATAR_COLORS, Avatar } from '../../common/components/avatar'
 import { AVATAR_SIZES } from '../../common/components/avatar'
 import { BADGE_COLORS, Badge } from '../../common/components/badge'
 import { FileUploader } from '../../common/components/fileuploader'
+import { TextAreaInput } from '../../common/components/inputs/textarea'
+import { Modal } from '../../common/components/modal'
 
 export default function Home() {
   return (
@@ -142,6 +144,30 @@ export default function Home() {
       <Badge text="1">
       </Badge>
       <FileUploader onChange={() => { }} multiple={true} />
+      <TextAreaInput
+        value="Hello world"
+        label="Notes"
+        fullWidth={true}
+        minHeight="160px"
+      />
+
+      <Modal
+        size='small'
+        title="Modal"
+        open={true}
+        onOK={() => { }}
+        okText="Proceed"
+        onCancel={() => { }}
+        cancelText="Cancel"
+        closable={true}
+        onClose={() => { }}
+        okButtonProps={{
+          disabled: false,
+          loading: false,
+        }}
+      >
+        <div>Customized modal</div>
+      </Modal>
     </main>
   )
 }
