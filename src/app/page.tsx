@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANT, Button } from '../../common/components/button'
 import { TextInput } from '../../common/components/inputs/text'
@@ -6,6 +7,8 @@ import { LABEL_SIZES, LABEL_TYPES, Label } from '../../common/components/label'
 import { SPINNER_SIZES, Spinner } from '../../common/components/spinner'
 import { AVATAR_COLORS, Avatar } from '../../common/components/avatar'
 import { AVATAR_SIZES } from '../../common/components/avatar'
+import { BADGE_COLORS, Badge } from '../../common/components/badge'
+import { FileUploader } from '../../common/components/fileuploader'
 
 export default function Home() {
   return (
@@ -136,6 +139,9 @@ export default function Home() {
       >
         A
       </Avatar>
+      <Badge text="1">
+      </Badge>
+      <FileUploader onChange={() => { }} multiple={true} />
     </main>
   )
 }
